@@ -20,16 +20,16 @@ function App () {
       <LoginBanner className='text-[#1293aa]' />
       <LoginCard>
         <CardGroup>
-          <Card className='w-full backdrop-blur-md bg-white/80 shadow-xl border-0'>
+          <Card className='w-full border-0 shadow-xl backdrop-blur-md bg-white/80'>
             <CardHeader>
-              <CardTitle className='text-cyan-600 text-xl'>Halo,</CardTitle>
+              <CardTitle className='text-xl text-cyan-600'>Halo,</CardTitle>
             </CardHeader>
             <CardContent>
               <LoginFields />
             </CardContent>
           </Card>
 
-          <Card className='w-full bg-cyan-600 text-white p-4 shadow-lg border-0'>
+          <Card className='w-full p-4 text-white border-0 shadow-lg bg-cyan-600'>
             <CardContent>
               <CardTitle className='text-sm'>"Pink is new black"</CardTitle>
             </CardContent>
@@ -38,14 +38,14 @@ function App () {
         </CardGroup>
 
         {/* Card 3 */}
-        <Card className='w-60 rounded-xl bg-white/80 backdrop-blur-md shadow-lg border-0 p-4 flex flex-col justify-between'>
+        <Card className='flex flex-col justify-between p-4 border-0 shadow-lg w-60 rounded-xl bg-white/80 backdrop-blur-md'>
           <CardContent>
-            <div className='text-gray-500 text-sm'>May ‘25</div>
-            <CardTitle className='text-4xl text-orange-400 font-bold mt-2'>
+            <div className='text-sm text-gray-500'>May ‘25</div>
+            <CardTitle className='mt-2 text-4xl font-bold text-orange-400'>
               +
             </CardTitle>
           </CardContent>
-          <CardFooter className='text-center text-sm text-gray-700'>
+          <CardFooter className='text-sm text-center text-gray-700'>
             Demak <br /> Mostly Clear <br /> H: 24° L: 18°
           </CardFooter>
         </Card>

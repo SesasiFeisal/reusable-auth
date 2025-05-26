@@ -1,14 +1,14 @@
 import { cn } from '../../lib/utils'
 
-type LoginBannerProps = {
-  image?: string
+type LoginBannerProps = React.ComponentProps<'div'> & {
+  image: string
   imageAlt?: string
   title?: string
   backgroundColor?: string
-} & React.ComponentProps<'div'>
+}
 
 export default function LoginBanner ({
-  image = 'logo-sidak.png',
+  image,
   imageAlt = 'Sidak Logo',
   title = 'Sistem Informasi Website SESASI',
   className,
@@ -17,13 +17,13 @@ export default function LoginBanner ({
 }: LoginBannerProps) {
   return (
     <div
-      className='relative md:w-1/2 w-full h-64 md:h-auto flex items-center justify-center'
+      className='relative flex items-center justify-center w-full h-64 md:w-1/2 md:h-auto'
       data-slot='login-banner'
     >
       <div
         className={`absolute inset-0 ${backgroundColor} backdrop-blur-3xl`}
       />
-      <div className='relative z-10 text-center px-6 md:px-12'>
+      <div className='relative z-10 px-6 text-center md:px-12'>
         <div
           className={cn(
             'flex flex-col md:flex-row items-center md:items-center space-y-4 md:space-y-0 md:space-x-4 ',
@@ -32,16 +32,16 @@ export default function LoginBanner ({
           {...props}
         >
           <img
-            className='aspect-square object-cover'
+            className='object-cover aspect-square'
             src={image}
             alt={imageAlt}
             width={100}
             height={100}
           />
 
-          <div className='hidden md:block w-1 self-stretch bg-current ' />
+          <div className='self-stretch hidden w-1 bg-current md:block ' />
 
-          <h1 className='text-center md:text-left text-3xl font-bold'>
+          <h1 className='text-3xl font-bold text-center md:text-left'>
             {title}
           </h1>
         </div>

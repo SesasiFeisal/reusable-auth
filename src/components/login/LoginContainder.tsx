@@ -1,8 +1,8 @@
 import { cn } from '../../lib/utils'
 
-type LoginContainerProps = {
-  backgroundImage?: string
-} & React.ComponentProps<'div'>
+type LoginContainerProps = React.ComponentProps<'div'> & {
+  backgroundImage: string
+}
 
 export default function LoginContainer ({
   backgroundImage,
@@ -15,7 +15,9 @@ export default function LoginContainer ({
         'min-h-screen flex flex-col md:flex-row bg-cover bg-center',
         className
       )}
-      style={{ backgroundImage: `url(${backgroundImage ?? 'default-bg.jpg'})` }}
+      style={{
+        backgroundImage: `url(${backgroundImage})`
+      }}
       {...props}
     ></div>
   )
