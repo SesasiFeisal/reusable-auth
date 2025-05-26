@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --color-card: var(--card);
+}
+:root {
+  --card: oklch(0.9879 0.0045 34.31 / 0.3);
+}
+
+@layer base {
+  body {
+    @apply text-white;
+  }
+}
