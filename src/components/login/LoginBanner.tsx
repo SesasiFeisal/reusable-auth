@@ -17,7 +17,7 @@ export default function LoginBanner ({
 }: LoginBannerProps) {
   return (
     <div
-      className='relative flex items-center justify-center w-full h-64 md:w-1/2 md:h-auto'
+      className='relative flex items-center justify-center w-full h-64 md:h-auto md:w-1/2 md'
       data-slot='login-banner'
     >
       <div
@@ -39,8 +39,7 @@ export default function LoginBanner ({
             height={100}
           />
 
-          <div className='self-stretch hidden w-1 bg-current md:block ' />
-
+          <div className='self-stretch hidden w-px bg-current md:block ' />
           <h1 className='text-3xl font-bold text-center md:text-left'>
             {title}
           </h1>
